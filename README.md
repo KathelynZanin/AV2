@@ -24,4 +24,4 @@ A aplicação é um protótipo funcional preparado para rodar em:
   
 ## EasterEgg
 Um detalhe especial
-Como todo bom projeto guarda um segredo, incluí um pequeno easter egg para quem gosta de referências clássicas. Se você estiver com a aplicação aberta e realizar a sequência do Código Konami no seu teclado, algo especial acontecerá:
+Como todo bom projeto guarda um segredo, incluí um pequeno easter egg para quem gosta de referências clássicas. Se você estiver com a aplicação aberta e realizar a sequência do Código Konami (Cima, Cima, Baixo, Baixo, Esquerda, Direita, Esquerda, Direita, B, A) no seu teclado, algo especial acontecerá
