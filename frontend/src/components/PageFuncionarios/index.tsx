@@ -1,5 +1,6 @@
 import type { Funcionario, NivelPermissao } from "../../types";
 import { BadgeNivel } from "../BadgeNivel";
+import { Modal } from "../Modal/index";
 
 type Props = {
   funcionarios: Funcionario[];
@@ -141,7 +142,7 @@ export function PageFuncionarios({
       )}
 
       {modalAberto && (
-        <div className="modal">
+        <Modal>
           <div className="modal-box">
             <h3>{funcionarioEditando ? "Editar Funcionário" : "Novo Funcionário"}</h3>
             {erroFuncionario && (
@@ -271,7 +272,7 @@ export function PageFuncionarios({
               </button>
             </div>
           </div>
-        </div>
+        </Modal>
       )}
     </section>
   );

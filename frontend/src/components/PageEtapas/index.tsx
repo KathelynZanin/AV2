@@ -1,5 +1,6 @@
 import type { Aeronave, Etapa, Funcionario } from "../../types";
 import { BadgeNivel } from "../BadgeNivel";
+import { Modal } from "../Modal/index";
 
 type Props = {
   etapas: Etapa[];
@@ -11,13 +12,13 @@ type Props = {
   onAbrirAssociar: (index: number) => void;
   onRemoverFuncionario: (etapaIndex: number, funcId: number) => void;
   onNovaEtapa: () => void;
- 
+
   novaEtapa: Etapa;
   onNovaEtapaChange: (e: Etapa) => void;
   modalEtapaAberto: boolean;
   onSalvarEtapa: () => void;
   onCancelarEtapa: () => void;
- 
+
   modalAssociarAberto: boolean;
   etapaAssociarIndex: number | null;
   funcionarioParaAssociar: string;
@@ -195,9 +196,8 @@ export function PageEtapas({
         </div>
       )}
 
-      
       {modalEtapaAberto && (
-        <div className="modal">
+        <Modal>
           <div className="modal-box">
             <h3>Nova Etapa</h3>
             <label>
@@ -239,12 +239,11 @@ export function PageEtapas({
               </button>
             </div>
           </div>
-        </div>
+        </Modal>
       )}
 
-   
       {modalAssociarAberto && etapaAssociarIndex !== null && (
-        <div className="modal">
+        <Modal>
           <div className="modal-box">
             <h3>Associar Funcionário</h3>
             <p style={{ color: "#6b7280", marginTop: 0 }}>
@@ -277,7 +276,7 @@ export function PageEtapas({
               </button>
             </div>
           </div>
-        </div>
+        </Modal>
       )}
     </section>
   );

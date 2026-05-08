@@ -1,5 +1,6 @@
 import type { Aeronave, Peca, StatusPeca, TipoPeca } from "../../types";
 import { PROXIMO_STATUS_PECA } from "../../constants";
+import { Modal } from "../Modal/index";
 
 type Props = {
   pecas: Peca[];
@@ -122,7 +123,7 @@ export function PagePecas({
       </table>
 
       {modalAberto && (
-        <div className="modal">
+        <Modal>
           <div className="modal-box">
             <h3>Nova Peça</h3>
             <label>
@@ -191,7 +192,7 @@ export function PagePecas({
               </button>
             </div>
           </div>
-        </div>
+        </Modal>
       )}
     </section>
   );

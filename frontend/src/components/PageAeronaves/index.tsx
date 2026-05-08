@@ -1,4 +1,5 @@
 import type { Aeronave, TipoAeronave } from "../../types";
+import { Modal } from "../Modal/index";
 
 type Props = {
   aeronaves: Aeronave[];
@@ -74,7 +75,7 @@ export function PageAeronaves({
       </table>
 
       {modalAberto && (
-        <div className="modal">
+        <Modal>
           <div className="modal-box">
             <h3>Nova Aeronave</h3>
             <label>
@@ -145,7 +146,7 @@ export function PageAeronaves({
               </button>
             </div>
           </div>
-        </div>
+        </Modal>
       )}
     </section>
   );
